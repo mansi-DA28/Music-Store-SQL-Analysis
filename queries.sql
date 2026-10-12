@@ -98,7 +98,7 @@ ORDER BY 5 DESC;
 /* Q2: We want to find out the most popular music Genre for each country. We determine the most popular genre as the genre 
 with the highest amount of purchases. Write a query that returns each country along with the top Genre. For countries where 
 the maximum number of purchases is shared return all Genres. */
-WITH RECURSIVE
+WITH
     sales_per_country AS(
         SELECT COUNT(*) AS purchases_per_genre, customer.country, genre.name, genre.genre_id
 		FROM invoice_line
@@ -122,7 +122,7 @@ WHERE sales_per_country.purchases_per_genre = max_genre_per_country.max_genre_nu
 /* Q3: Write a query that determines the customer that has spent the most on music for each country. 
 Write a query that returns the country along with the top customer and how much they spent. 
 For countries where the top amount spent is shared, provide all customers who spent this amount. */
-WITH RECURSIVE
+WITH
     customer_with_country AS (
         SELECT customer.customer_id, first_name, last_name, billing_country, SUM(total) AS total_spend
 		FROM invoice
