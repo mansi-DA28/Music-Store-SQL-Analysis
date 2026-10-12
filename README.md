@@ -1,9 +1,8 @@
 # 🎵 Music Store SQL Analysis
 
 ## 📌 Project Overview
-This project analyzes a music store database (Chinook-style dataset) using PostgreSQL. 
-The goal is to answer real-world business questions using SQL — ranging from basic 
-lookups to advanced queries involving CTEs, window functions, and recursive queries.
+The goal is to answer real-world business questions using SQL — ranging from basic
+lookups to advanced queries involving multi-table JOINs, CTEs, subqueries and aggregation.
 
 ## 🛠️ Tools Used
 - **PostgreSQL** (Database)
@@ -46,7 +45,7 @@ Refer to `schema_diagram.png` for the full Entity-Relationship Diagram (ERD).
 
 ## 💡 Key Learnings
 - Writing multi-table JOIN queries across a normalized schema
-- Using CTEs (Common Table Expressions) for cleaner, modular queries
+- Using CTEs, subqueries and aggregation with self-joins to solve ranking and tie-handling problems (top value per group)
 - Applying window functions and subqueries for ranking and comparison
 - Handling data import challenges (date formats, schema mismatches) during setup
 
