@@ -1,6 +1,6 @@
 /*	Question Set 1 - Easy */
 
-/*Q1: Who is the senior most employee based on job title?/*
+/*Q1: Who is the senior most employee based on job title?*/
 
 SELECT * FROM employee
 ORDER BY levels desc
